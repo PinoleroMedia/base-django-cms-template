@@ -15,9 +15,11 @@
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname( __file__ ), os.path.pardir, os.path.pardir))
+    ROOT_DIR = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir))
     # Quick-start development settings - unsuitable for production
-    # See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
+    # See https://docs.djangoproject.com/en/{{ docs_version
+    # }}/howto/deployment/checklist/
 
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = '{{ secret_key }}'
@@ -26,7 +28,6 @@
     DEBUG = True
 
     ALLOWED_HOSTS = []
-
 
     # Application definition
 
@@ -37,6 +38,8 @@
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+
+        'app.content',
     ]
 
     MIDDLEWARE_CLASSES = [
@@ -57,13 +60,13 @@
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+            'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
             'APP_DIRS': True,
             'OPTIONS': {
                 'context_processors': [
                     'django.template.context_processors.debug',
                     'django.template.context_processors.media',
-    				'django.template.context_processors.static',
+                    'django.template.context_processors.static',
                     'django.template.context_processors.request',
                     'django.contrib.auth.context_processors.auth',
                     'django.contrib.messages.context_processors.messages',
@@ -76,9 +79,9 @@
 
     WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
-
     # Database
-    # https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
+    # https://docs.djangoproject.com/en/{{ docs_version
+    # }}/ref/settings/#databases
 
     DATABASES = {
         'default': {
@@ -86,7 +89,6 @@
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
 
     # Internationalization
     # https://docs.djangoproject.com/en/{{ docs_version }}/topics/i18n/
@@ -101,7 +103,6 @@
 
     USE_TZ = True
 
-
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
 
@@ -113,7 +114,7 @@
     IMAGES_URL = STATIC_URL
     if not DEBUG:
         IMAGES_URL = STATIC_URL + 'build/'
-        
+
     STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
     MEDIA_URL = '/media/'
