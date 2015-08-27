@@ -4,7 +4,7 @@ from django.utils.translation import ugettext as _
 
 def model_directory_path(instance, filename):
     return instance.__class__.__name__+'/'+filename
-    
+
 class BaseCatalogModel(models.Model):
     name = models.CharField(max_length=150, verbose_name=_('Name'))
 
@@ -20,14 +20,14 @@ class BaseContentModel(models.Model):
         abstract = True
 
 
-class BaseContentOrderModel(models.Model):
+class BaseContentOrderModel(BaseContentModel):
     order = models.PositiveIntegerField(unique=True, verbose_name='Order')
 
     class Meta:
         abstract = True
 
 
-class BaseGallerieImage(BaseContentModel):
+class BaseGallerieImageModel(BaseContentModel):
     image = models.ImageField(
         upload_to=model_directory_path, verbose_name=_('Image'))
 
@@ -35,7 +35,7 @@ class BaseGallerieImage(BaseContentModel):
         abstract = True
 
 
-class BaseGallerieNavImage(BaseGallerieImage):
+class BaseGallerieNavImageModel(BaseGallerieImageModel):
     target = models.BooleanField(default=False, help_text=_('Open in new tab'))
     link = models.URLField(blank=True, null=True, verbose_name=_('Link'))
 

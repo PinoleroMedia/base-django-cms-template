@@ -14,7 +14,7 @@ class Section(BaseCatalogModel, BaseContentModel):
         ordering = ('id', )
 
 
-class SectionImage(BaseGallerieNavImage):
+class SectionImage(BaseGallerieNavImageModel):
     section = models.ForeignKey(Section, verbose_name=_('carousel'))
 
     def __str__(self):
