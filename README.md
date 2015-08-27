@@ -1,8 +1,7 @@
 # [![Pinolero Media](https://cloud.githubusercontent.com/assets/4844997/9451171/3ba44648-4a6a-11e5-8ddb-9a1438b1bb72.png)](http://pinoleromedia.com)
 
 ## Overview
-A django base project template including bower and gulp initial configurations it is based on the [Django Project Template](https://github.com/LRPalacios/django-project-template)
-This template includes a some inital apps and models that we have found common in web sites
+A django base project template including bower and gulp initial configurations it is based on the [Django Project Template](https://github.com/LRPalacios/django-project-template) but this template includes some inital apps that we have found common in web sites
 
 [Django documentation on project template](https://docs.djangoproject.com/en/1.8/ref/django-admin/#startproject-projectname-destination).
 
