@@ -23,3 +23,26 @@ class SectionImage(BaseGallerieNavImageModel):
     class Meta:
         verbose_name = _('Image')
         verbose_name_plural = _('Carousel')
+
+class Area(BaseContentModel):
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _('Editable Area')
+        verbose_name_plural = _('Editable Areas')
+
+class SocialMedia(BaseContentOrderModel):
+    link = models.URLField(verbose_name=_('link'))
+    css_logo_class = models.CharField(max_length=25, verbose_name='Css logo class')
+    css_container_class = models.CharField(max_length=25, verbose_name='Css container class')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = _('Social Media')
+        verbose_name_plural = _('Social Media')
+
+

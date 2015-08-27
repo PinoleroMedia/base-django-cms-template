@@ -19,3 +19,7 @@ class SectionAdmin(admin.ModelAdmin):
 class AreaAdmin(admin.ModelAdmin):
 	 list_display = ('title', )
 	 readonly_fields = ('title', )
+
+@admin.register(SocialMedia)
+class SocialMediaAdmin(admin.ModelAdmin)
+	list_display = ('title', 'link', )
