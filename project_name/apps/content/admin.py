@@ -1,9 +1,9 @@
 from django.contrib import admin
-from django.db.utils.translation import gettext as _
-from apps.content.model import *
+from django.utils.translation import gettext as _
+from apps.content.models import *
 
 
-class SectionImageInline(admin.TabularInLine):
+class SectionImageInline(admin.TabularInline):
     model = SectionImage
     extra = 2
     verbose_name = _('Carousel')

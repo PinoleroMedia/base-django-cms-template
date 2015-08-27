@@ -2,6 +2,9 @@ from django.db import models
 from django.utils.translation import ugettext as _
 
 
+def model_directory_path(instance, filename):
+    return instance.__class__.__name__+'/'+filename
+    
 class BaseCatalogModel(models.Model):
     name = models.CharField(max_length=150, verbose_name=_('Name'))
 
@@ -39,6 +42,4 @@ class BaseGallerieNavImage(BaseGallerieImage):
     class Meta:
         abstract = True
 
-def model_directory_path(instance, filename):
-    return instance.__class__.__name__+'/'+filename
 
