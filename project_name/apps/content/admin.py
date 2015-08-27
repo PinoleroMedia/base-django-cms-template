@@ -14,3 +14,8 @@ class SectionAdmin(admin.ModelAdmin):
     list_display = ('name', 'title', )
     inlines = [SectionImageInline, ]
     readonly_fields = ('name',)
+
+@admin.register(Area)
+class AreaAdmin(admin.ModelAdmin):
+	 list_display = ('title', )
+	 readonly_fields = ('title', )
