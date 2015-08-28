@@ -15,11 +15,18 @@ class SectionAdmin(admin.ModelAdmin):
     inlines = [SectionImageInline, ]
     readonly_fields = ('name',)
 
+
 @admin.register(Area)
 class AreaAdmin(admin.ModelAdmin):
-	 list_display = ('title', )
-	 readonly_fields = ('title', )
+    list_display = ('title', )
+    readonly_fields = ('title', )
+
 
 @admin.register(SocialMedia)
 class SocialMediaAdmin(admin.ModelAdmin)
-	list_display = ('title', 'link', )
+    list_display = ('title', 'link', )
+
+
+@admin.register(FeaturedVideo)
+class FeaturedVideoAdmin(admin.ModelAdmin)
+    list_display = ('title', )
