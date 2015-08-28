@@ -23,8 +23,6 @@ class BaseDateManager(models.Manager):
         return months
 
     def get_by_date(self, month, year):
-        today = datetime.now()
-        current_month = today.month
         return self.filter(date__month=month, date__year=year).order_by('-date')
 
     def get_by_trimesters(self, year, trimester):
