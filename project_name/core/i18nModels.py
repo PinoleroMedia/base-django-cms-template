@@ -48,8 +48,6 @@ class BaseGallerieiImagei18nModel(BaseContenti18nModel, BaseGallerieImageModel):
         abstract = True
 
 class BaseGallerieNavImagei18nModel(BaseGallerieiImagei18nModel, BaseGallerieNavImageModel):
-    target = models.BooleanField(default=False, help_text=_('Open in new tab'))
-    link = models.URLField(blank=True, null=True, verbose_name=_('Link'))
 
     class Meta:
         abstract = True
