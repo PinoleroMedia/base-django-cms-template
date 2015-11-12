@@ -23,10 +23,10 @@ class AreaAdmin(admin.ModelAdmin):
 
 
 @admin.register(SocialMedia)
-class SocialMediaAdmin(admin.ModelAdmin)
+class SocialMediaAdmin(admin.ModelAdmin):
     list_display = ('title', 'link', )
 
 
 @admin.register(FeaturedVideo)
-class FeaturedVideoAdmin(admin.ModelAdmin)
+class FeaturedVideoAdmin(admin.ModelAdmin):
     list_display = ('title', )
